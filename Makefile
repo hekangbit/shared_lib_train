@@ -4,7 +4,7 @@ LIB_PATH=.
 
 
 main: main.o libtest.so
-	gcc $(CFLAGS) -o main main.o -L${LIB_PATH} -ldl -ltest -Wl,-rpath=.
+	gcc $(CFLAGS) -o main main.o -L${LIB_PATH} -lpthread -ldl -ltest -Wl,-rpath=.
 
 
 main.o: main.c test.h
